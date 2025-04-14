@@ -153,14 +153,14 @@ function toggleFullscreen() {
         favicon.href = siteLogo;
         newTab.document.head.appendChild(favicon);
 
-        const iframe = newTab.document.createElement('iframe');
-        iframe.src = document.getElementById('myIframe').src;
-        iframe.style.width = '100vw';
-        iframe.style.height = '100vh';
-        iframe.style.border = 'none';
+        const iframe = newTab.document.createElement('embed');
+        embed.src = document.getElementById('myIframe').src;
+        embed.style.width = '100vw';
+        embed.style.height = '100vh';
+        embed.style.border = 'none';
 
         newTab.document.body.style.margin = '0';
-        newTab.document.body.appendChild(iframe);
+        newTab.document.body.appendChild(embed);
     } else {
         console.error("Failed to open About:Blank page.");
     }
